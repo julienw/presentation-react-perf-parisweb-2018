@@ -46,9 +46,9 @@ depuis plus d'un an
 
 # On va parler de...
 
-1. React
-2. Redux
-3. (si on a le temps) du SSR
+1. Les outils
+2. React
+3. Redux
 4. à retenir !
 
 ---
@@ -68,13 +68,14 @@ class: center, middle
 
 * affichage des conférences Paris-Web depuis plusieurs années
 * possibilité de filtres et de tris
-* possibilité d'indiquer les conférences où l'on souhaite aller
+* possibilité d'indiquer les conférences où l'on souhaite aller, avec persistance
 ---
 
 # Cette application a quelques problèmes
 
 * rendu coûteux
 * rendu complet régulièrement
+* rendu complet à chaque interaction
 --
 * ... regardons de plus près ce qui se passe
 
@@ -93,6 +94,16 @@ Généralement il faut donc *mesurer avant de corriger*.
 
 --
 Et *après* avoir corrigé.
+
+---
+# react-devtools
+
+Possibilité de "highlight" les parties de la page qui sont mises à jour.
+
+React 16.5 inclut une API pour que react-devtools puisse afficher des
+informations de profiling.
+
+![Le profiler de react-devtools](images/react-devtools-profiler.png)
 
 ---
 # redux-logger
@@ -127,9 +138,6 @@ options lors de l'initialisation pour limiter cela.
 # profilers
 
 React 16, en mode développement, injecte des marqueurs indiquant les renders.
-
-À venir: une API pour que react-devtools puisse afficher ces informations et
-plus.
 
 ---
 # profilers
